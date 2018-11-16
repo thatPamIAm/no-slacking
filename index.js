@@ -1,10 +1,7 @@
-const express = require('express')
-const app = express();
+'use strict';
 
-app.get('/', (req, res) => {
-  res.send('Hello World!')
-});
+const server = require('./server')();
+const config = require('./configs');
 
-app.listen(8000, () => {
-  console.log('Example app listening on port 8000!')
-});
+server.create(config);
+server.start();
