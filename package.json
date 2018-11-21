@@ -11,9 +11,11 @@
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.18.3",
+    "dotenv": "^6.1.0",
     "express": "^4.16.4",
     "express-handlebars": "^3.0.0",
-    "lodash": "^4.17.11"
+    "lodash": "^4.17.11",
+    "strava-v3": "^1.14.0"
   },
   "devDependencies": {
     "eslint": "^5.9.0"

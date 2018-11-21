@@ -22,7 +22,6 @@ module.exports = function() {
     server.use(bodyParser.json());
 
     // Setup view engine
-
     server.engine('.hbs', expressHandlebars({
       defaultLayout: 'default',
       layoutsDir: config.viewDir + '/layouts',

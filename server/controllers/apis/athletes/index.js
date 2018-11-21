@@ -5,6 +5,6 @@ const athleteRecord = require('../../../services/athletes');
 
 let router = express.Router();
 
-router.get ('/', athleteRecord.getAthletes);
+router.get('/', athleteRecord.getAthletes);
 
 module.exports = router;
