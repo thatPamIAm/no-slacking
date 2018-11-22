@@ -1,25 +1,13 @@
 'use strict';
+var strava = require('strava-v3');
+require('dotenv').config()
 
-const athletes = [{
-  id: 1,
-  name: 'Mike Dao',
-  sports: [
-      'cycling',
-      'steps'
-  ]
-}, {
-  id: 2,
-  name: 'Pam Lovett',
-  sports: [
-      'running',
-      'steps'
-  ]
-}];
-
-function getAthletes(req, res) {
-  res.json(athletes);
+function getAthletes (req, res) {
+  strava.athlete.get({'access_token':process.env.STRAVA_ACCESS_TOKEN}, function(err, payload, limits){
+    res.json({name: payload.firstname, city: payload.city})
+  })
 }
 
 module.exports = {
   getAthletes: getAthletes
-};
+}

@@ -8,11 +8,20 @@ function index (req, res) {
 
 function info (req, res) {
   res.render('home/info', {
-    title: 'More info'
+    title: 'Additional Info page'
   });
+}
+
+function athleteInfo (req, res) {
+  res.render('home/athlete', {
+    info: 'Athlete Info',
+    athleteName: 'NAME',
+    athleteCity: 'CITY'
+  })
 }
 
 module.exports = {
   index: index,
-  info: info
+  info: info,
+  athleteInfo: athleteInfo
 }
